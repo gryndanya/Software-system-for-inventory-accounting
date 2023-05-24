@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Admin Login</title>
+    <link rel="stylesheet" type="text/css" href="/static/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css"/>
+</head>
+<body>
+    <p>Admin login page</p>
+    <form th:action="@{/admins}" method="post">
+        <input type="text" name="admin_login" id="admin_login" value="abb">
+        <input type="submit" value="Admin">
+    </form>
+</body>
+</html>

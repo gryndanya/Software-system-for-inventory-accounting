@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="ISO-8859-1">
+    <title th:text="#{update}">
+
+    </title>
+    <link rel="stylesheet" type="text/css" href="/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <script src="https://kit.fontawesome.com/249c0f3ecd.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-light">
+<div class="container">
+    <h1 th:text="#{inventory_managment_system}"></h1>
+    <hr>
+    <a class="btn btn-primary" th:href="@{/inventory}">
+        <i class="fas fa-undo"></i>
+        <span th:text="#{back}"></span>
+    </a>
+    <a class="btn btn-primary" th:href="@{/mainMenu}">
+        <i class="fas fa-home"></i>
+        <span th:text="#{menu}"></span>
+    </a>
+    <a class="btn btn-primary" th:href="@{/our_service}">
+        <i class="fas fa-warehouse"></i>
+        <span th:text="#{our_service}"></span>
+    </a>
+    <h2 th:text="#{update}"></h2>
+    <form action="#" th:action="@{/updateInventory}" th:object="${inventory}" method="post">
+        <input type="hidden" th:field="*{id}">
+        <label class="col-2" th:text="#{name}"></label>
+        <input type="text" th:field="*{name}" class="form-control mb-4 col-4 d-inline-block" required minlength="2" maxlength="30">
+        <br>
+        <label class="col-2" th:text="#{quantity}"></label>
+        <input type="number" th:field="*{quantity}" class="form-control mb-4 col-4 d-inline-block" required min="1">
+        <br>
+        <label class="col-2" th:text="#{category}"></label>
+        <select th:field="*{category}" class="mb-4 form-select" required>
+            <option th:each="c : ${listCategory}" th:value="${c.name}" th:text="${c.name}">
+            </option>
+        </select>
+        <br>
+        <label class="col-2" th:text="#{address_of_stock}"></label>
+        <select th:field="*{address_of_stock}" class="mb-4 form-select" required>
+            <option th:each="s : ${listStock}" th:value="${s.name}" th:text="${s.name}">
+            </option>
+        </select>
+        <br>
+        <button type="submit" class="btn btn-info col-2">
+            <i class="far fa-save"></i>
+            <span th:text="#{update}"></span>
+        </button>
+    </form>
+</div>
+</body>
+</html>

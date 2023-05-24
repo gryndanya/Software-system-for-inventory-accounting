@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="ISO-8859-1">
+    <title th:text="#{home}"></title>
+    <link rel="stylesheet" type="text/css" href="/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css"/>
+</head>
+<body class="bg-light">
+    <div class="container text-center mt-5">
+        <div class="text-center">
+            <h1 class="d-inline-block" th:text="#{welcome.text}"></h1>
+            <br>
+            <h2 class="d-inline-block" th:text="#{welcome.text2}"></h2>
+            <div>
+                <a href="?lang=en">Login (English)</a>
+                &nbsp;|&nbsp;
+                <a href="?lang=ukr">Login (Ukrainian)</a>
+                &nbsp;|&nbsp;
+                <a href="?lang=ru">Login (Russian)</a>
+            </div>
+            </div>
+        </div>
+        <div class="text-center mt-5">
+            <div class="p-0" style="display: grid;grid-template-columns: 1fr 1fr;">
+                <div class="card m-auto" style="width: 20rem;">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <h3 class="border border-primary rounded mt-3">
+                                <a th:href="@{/info}" class="nav-link d-inline-block" style="line-height: 1;font-size: 26px;" th:text="#{welcome.info}">
+                                </a>
+                            </h3>
+                        </li>
+                        <li class="list-group-item">
+                            <h3 class="border border-primary rounded mt-3">
+                                <a th:href="@{/our_service}" class="nav-link d-inline-block" style="line-height: 1;font-size: 26px;" th:text="#{welcome.service}">
+                                </a>
+                            </h3>
+                        </li>
+                        <li class="list-group-item">
+                            <h3 class="border rounded mt-3">
+                                <a th:href="@{/register}" class="nav-link d-inline-block btn btn-primary w-100" style="line-height: 1;font-size: 26px;" th:text="#{welcome.register}">
+                                </a>
+                            </h3>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card m-auto" style="width: 20rem;">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <h3 class="mt-3">
+                                <a th:href="@{/list_users}" class="nav-link d-inline-block btn btn-secondary w-100" style="line-height: 1;font-size: 26px;" th:text="#{welcome.list}">
+                                </a>
+                            </h3>
+                        </li>
+                        <li class="list-group-item">
+                            <h3 class="mt-3">
+                                <a th:href="@{/list_users_edit}" class="nav-link d-inline-block btn btn-secondary w-100" style="line-height: 1;font-size: 26px;" th:text="#{welcome.admin}">
+                                </a>
+                            </h3>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

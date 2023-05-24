@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="ISO-8859-1">
+    <title th:text="#{info}"></title>
+    <link rel="stylesheet" type="text/css" href="/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <script src="https://kit.fontawesome.com/249c0f3ecd.js" crossorigin="anonymous"></script>
+
+</head>
+<body class="bg-light">
+    <div class="container mt-3">
+        <a class="btn btn-primary" th:href="@{/}">
+            <i class="fas fa-undo"></i>
+            <span th:text="#{menu}"></span>
+        </a>
+        <div class="row justify-content-around mt-3">
+            <div class="card text-center d-inline-block pt-3 col-3" style="width: 18rem;">
+                <img src="/img/plus.png" class="card-img-top mt-3" alt="..." style="width: 64px;margin: 9px 0 25px 0;">
+                <div class="card-body p-0 pt-2 pb-3 border-top border-dark">
+                    <p class="card-text" th:text="#{card1}">
+
+                    </p>
+                </div>
+            </div>
+            <div class="card text-center d-inline-block pt-3 col-3" style="width: 18rem;">
+
+                <img src="/img/menu.png" class="card-img-top mt-3" alt="..." style="width: 64px;margin: 9px 0 25px 0;">
+                <div class="card-body p-0 pt-2 pb-3 border-top border-dark">
+                    <p class="card-text" th:text="#{card2}">
+
+                    </p>
+                </div>
+            </div>
+            <div class="card text-center d-inline-block pt-3 col-3" style="width: 18rem;">
+
+                <img src="/img/exchange.png" class="card-img-top mt-3" alt="..." style="width: 64px;margin: 9px 0 25px 0;">
+                <div class="card-body p-0 pt-2 pb-3 border-top border-dark">
+                    <p class="card-text" th:text="#{card3}">
+                        Event location, stocks, inventory items and inventory
+                        categories can be changed, deleted and search by name.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-around mt-3">
+            <div class="card text-center d-inline-block pt-3 col-3" style="width: 18rem;">
+
+                <img src="/img/translation.png" class="card-img-top mt-3" alt="..." style="width: 64px;margin: 9px 0 25px 0;">
+                <div class="card-body p-0 pt-2 pb-3 border-top border-dark">
+                    <p class="card-text" th:text="#{card4}">
+                        Localizations have been added to the software system.
+                        There are two languages - Russian and English.
+                    </p>
+                </div>
+            </div>
+            <div class="card text-center d-inline-block pt-3 col-3" style="width: 18rem;">
+
+                <img src="/img/warehouse.png" class="card-img-top mt-3" alt="..." style="width: 64px;margin: 9px 0 25px 0;">
+                <div class="card-body p-0 pt-2 pb-3 border-top border-dark">
+                    <p class="card-text" th:text="#{card5}">
+                        When you add a certain amount of one item of inventory to an event, the quantity in stock decreases.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="ISO-8859-1">
+    <title th:text="#{registration}"></title>
+    <link rel="stylesheet" type="text/css" href="/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css"/>
+</head>
+<body class="bg-light">
+    <div class="container text-center mt-5">
+        <div class="text-left m-auto"
+             style="max-width: 600px;">
+            <h1 th:text="#{user_registration}">
+
+            </h1>
+        </div>
+        <form th:action="@{/process_register}" method="post" th:object="${user}"
+              class="m-auto"
+              style="max-width: 600px;">
+            <div class="m-3 ml-0">
+                <div class="form-group row">
+                    <label class="col-form-label col-3 text-left" th:text="#{email}"></label>
+                    <div class="col-5">
+                        <input type="email" class="form-control" th:field="*{email}" placeholder="Email address" required>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-form-label col-3 text-left" th:text="#{password}"></label>
+                    <div class="col-5">
+                        <input type="password" class="form-control" th:field="*{password}" placeholder="Password" required
+                        minlength="6" maxlength="10">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-form-label col-3 text-left" th:text="#{first_name}"></label>
+                    <div class="col-5">
+                        <input type="text" class="form-control" th:field="*{firstName}" placeholder="First Name" required
+                               minlength="2" maxlength="20">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-form-label col-3 text-left" th:text="#{last_name}"></label>
+                    <div class="col-5">
+                        <input type="text" class="form-control" th:field="*{lastName}" placeholder="Last Name" required
+                               minlength="2" maxlength="20">
+                    </div>
+                </div>
+
+                <div class="row m-auto text-center">
+                    <div class="col-3"></div>
+                    <button type="submit" class="btn btn-primary btn-block col-5" th:text="#{sign_up}"></button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

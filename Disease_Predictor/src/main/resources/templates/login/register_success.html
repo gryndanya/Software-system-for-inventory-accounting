@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="ISO-8859-1">
+    <title th:text="#{registration_succeeded}"></title>
+    <link rel="stylesheet" type="text/css" href="/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css"/>
+</head>
+<body class="bg-light">
+    <div class="container text-center mt-5">
+        <div>
+            <h3 th:text="#{sign_up_suc}"></h3>
+            <h4><a th:href="@{/our_service}" th:text="#{click_here_login}"></a></h4>
+        </div>
+    </div>
+</body>
+</html>
